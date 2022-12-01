@@ -419,6 +419,7 @@ def AppliancesData(df):
         if r.status_code == 200:
             df_api_cons = from_csv_for_api_appl(df, room_type)
             df_appl_detail = data_similation_appl(df_api_cons,appliances_list)
+            st.write("Simulated data:")
             st.write(df_appl_detail)
             #########
             #column name with datetime
